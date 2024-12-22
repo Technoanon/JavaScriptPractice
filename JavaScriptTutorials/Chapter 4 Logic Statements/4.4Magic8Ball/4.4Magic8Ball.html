@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misty's Magic 8-Ball</title>
+    <link rel="stylesheet" href="magic8Ball4.4.css">
+</head>
+<body>
+<h1>Misty's Magic 8-Ball</h1>
+<p>Ask Misty the Magic 8-Ball a question:</p>
+<div id="mistyBall">
+    <svg id="eightBall" viewBox="0 0 300 300">
+        <defs>
+            <pattern id="magicPattern" patternUnits="userSpaceOnUse" width="300" height="300">
+                <image xlink:href="mspaint_VNljQQFX6L.png" width="300" height="300" />
+            </pattern>
+        </defs>
+        <circle cx="150" cy="150" r="150" fill="url(#magicPattern)"/>
+        <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" fill="#9932cc" font-size="24">
+            Misty's Magic 8-Ball
+        </text>
+    </svg>
+    <input type="text" id="userQuestion" placeholder="Type your question" aria-label="Enter your question" class="questionInput">
+    <button id="getAnswer" class="askMisty" aria-label="Get answer from Misty's Magic 8-Ball">Ask Misty</button>
+</div>
+<div id="result" aria-live="polite"></div>
+
+<script src="Magic8Ball4.4.js"></script>
+</body>
+</html>

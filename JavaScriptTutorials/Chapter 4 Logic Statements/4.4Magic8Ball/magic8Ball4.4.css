@@ -1,0 +1,140 @@
+/* Basic reset for better consistency across browsers */
+body, h1, p, div, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply a background color and some padding to the body */
+body {
+    background-color: #1a1a1d;
+    font-family: Georgia, sans-serif;
+    color: #d3d3d3;
+    padding: 20px;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Style the heading */
+h1 {
+    color: #7f00ff;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+/* Style the paragraph */
+p {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #197035;
+}
+
+/* Style the input field */
+input[type="text"] {
+    padding: 10px;
+    font-size: 1em;
+    border: 2px solid #7f00ff;
+    border-radius: 5px;
+    width: 60%;
+    max-width: 400px;
+    margin-bottom: 10px;
+    background: #2b2b2b;
+    color: #d3d3d3;
+}
+input[type="text"]::placeholder {
+    color: #666666;
+    opacity: 1;
+}
+
+/* Style the button */
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #ffffff;
+    background-color: #7f00ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 15px #9932cc;
+}
+
+button:hover {
+    background-color: #9932cc;
+    box-shadow: 0 0 10px #9932cc;
+}
+
+/* Style the result container with a mystical touch */
+#result {
+    background-color: rgba(43, 43, 43, 0.82); /* Semi-transparent dark background */
+    border: 2px solid #7f00ff;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 400px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(127, 0, 255, 0.2);
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #d3d3d3;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, transform 0.5s;
+    transform-origin: center;
+}
+
+.spin {
+    animation: spin 0.5s ease-in-out forwards;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#mistyBall {
+    position: relative;
+    display: inline-block;
+    margin: 20px 0;
+}
+
+#eightBall {
+    width: 300px;
+    height: 300px;
+    cursor: pointer;
+}
+
+.questionInput {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%; /* Changed from 80% to 70% for a smaller width */
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    font-size: 1em;
+    text-align: center;
+    z-index: 1;
+}
+.askMisty {
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #ffffff;
+    background-color: #7f00ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 15px #9932cc;
+    z-index: 1;
+}
+
+.askMisty:hover {
+    background-color: #9932cc;
+    box-shadow: 0 0 10px #9932cc;
+}
