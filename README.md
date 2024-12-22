@@ -1,0 +1,1 @@
+These projects and notes are mostly from Java script books i studied. I do have an App and Webpage call Misty's magic eightball i know i broke it before uploading i will try to fix. I have a better version of eightball ii will upload to a diffrent rapsitoy.
